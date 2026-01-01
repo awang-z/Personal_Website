@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Project 1 - Assignment Progress by Colors</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <header class="app-header">
+    <div class="container">
+      <h1>Project 1: Track Assignment Progress by Colors</h1>
+      <p class="subtitle">
+        Three colors for status:
+        <span class="status-pill status-meet">Green = On Track / Completed on time</span>,
+        <span class="status-pill status-late">Orange = Late / Completed late</span>,
+        <span class="status-pill status-blocked">Red = Blocked</span>.
+      </p>
+    </div>
+  </header>
+
+  <main class="container">
+    <section class="create-section">
+      <h2>Create / Update Assignment</h2>
+      <form id="assignmentForm" class="assignment-form">
+        <div class="form-row">
+          <label for="name">Assignment name</label>
+          <input type="text" id="name" name="name" required placeholder="e.g. CS homework 3" />
+        </div>
+
+        <div class="form-row">
+          <label for="project">Project / Course</label>
+          <input type="text" id="project" name="project" placeholder="e.g. CS 225" />
+        </div>
+
+        <div class="form-row">
+          <label for="dueDate">Due date</label>
+          <input type="date" id="dueDate" name="dueDate" required />
+        </div>
+
+        <div class="form-row">
+          <label for="completedDate">Completed date (optional)</label>
+          <input type="date" id="completedDate" name="completedDate" />
+        </div>
+
+        <div class="form-row checkbox-row">
+          <label>
+            <input type="checkbox" id="blocked" name="blocked" />
+            This assignment is totally blocked
+          </label>
+        </div>
+
+        <div class="form-actions">
+          <button type="submit" class="btn primary" id="saveButton">Add assignment</button>
+          <button type="button" class="btn ghost" id="resetButton">Clear form</button>
+        </div>
+
+        <input type="hidden" id="editId" />
+      </form>
+      <p class="note">
+        Status rules:
+        <br />
+        • If <strong>Blocked</strong> is checked → <span class="status-pill status-blocked">Red = Blocked</span>.<br />
+        • If there is a completed date:<br />
+        &nbsp;&nbsp;– Completed on or before due date → <span class="status-pill status-meet">Green = Completed on time</span>.<br />
+        &nbsp;&nbsp;– Completed after due date → <span class="status-pill status-late">Orange = Completed late</span>.<br />
+        • If there is no completed date yet:<br />
+        &nbsp;&nbsp;– Due date in the future or today → <span class="status-pill status-meet">Green = On Track</span>.<br />
+        &nbsp;&nbsp;– Due date in the past → <span class="status-pill status-late">Orange = Late</span>.
+      </p>
+    </section>
+
+    <section class="board-section">
+      <h2>Assignments Board</h2>
+      <div class="board-toolbar">
+        <button type="button" class="btn small" id="filterAll">All</button>
+        <button type="button" class="btn small" id="filterMeet">On Track / On Time</button>
+        <button type="button" class="btn small" id="filterLate">Late</button>
+        <button type="button" class="btn small" id="filterBlocked">Blocked</button>
+      </div>
+      <div class="board">
+        <table class="assignments-table">
+          <thead>
+            <tr>
+              <th>Status</th>
+              <th>Assignment</th>
+              <th>Project / Course</th>
+              <th>Due</th>
+              <th>Completed</th>
+              <th>Summary</th>
+              <th>Actions</th>
+            </tr>
+          </thead>
+          <tbody id="assignmentsBody">
+            <!-- rows inserted by script.js -->
+          </tbody>
+        </table>
+        <p id="emptyState" class="empty-state">No assignments yet. Add one using the form above.</p>
+      </div>
+    </section>
+  </main>
+
+  <footer class="app-footer">
+    <div class="container">
+      <a href="/" class="back-link">← Back to main website</a>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
