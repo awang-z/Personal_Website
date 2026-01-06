@@ -3,60 +3,67 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Angela 2027 - Projects</title>
-  <link rel="stylesheet" href="assets/styles.css" />
+  <title>Angela | Computer Science Student</title>
+  <link rel="stylesheet" href="styles.css" />
 </head>
 <body>
-  <header class="site-header">
-    <div class="container">
-      <h1 class="site-title">Angela 2027</h1>
-      <p class="site-subtitle">A CS student exploring AI and modern software engineering.</p>
-      <p class="site-email">
-        Contact: <a href="mailto:awang77@uic.edu">awang77@uic.edu</a>
-      </p>
+  <nav>
+    <h1>Angela</h1>
+    <ul>
+      <li><a href="#about">About</a></li>
+      <li><a href="#projects">Projects</a></li>
+      <li><a href="#music">Music</a></li>
+      <li><a href="#contact">Contact</a></li>
+    </ul>
+  </nav>
+
+  <section class="hero">
+    <img src="profile.jpg" alt="Profile picture placeholder" />
+    <div>
+      <h2>Computer Science Student</h2>
+      <p>Interested in front-end development, human-centered design, and creative technology.</p>
     </div>
-  </header>
+  </section>
 
-  <main class="container">
-    <section class="projects-section">
-      <h2 class="section-title">My Projects</h2>
-      <div class="projects-grid">
+  <section id="about">
+    <h2>About Me</h2>
+    <p>
+      I am a computer science student with experience in JavaScript, HTML, and CSS.
+      I enjoy building user-focused applications and mentoring other students.
+    </p>
+  </section>
 
-        <!-- Project 1 -->
-        <a class="project-card" href="/project1/">
-          <div class="project-image project-image-1" aria-hidden="true"></div>
-          <h3 class="project-title">Project 1: Track assignment progress by colors</h3>
-          <p class="project-description">
-            A visual way to track homework and assignments using color status indicators.
-          </p>
-        </a>
-
-        <!-- Project 2 -->
-        <a class="project-card" href="/project2/">
-          <div class="project-image project-image-2" aria-hidden="true"></div>
-          <h3 class="project-title">Project 2: Practice React front, Java API and MongoDB</h3>
-          <p class="project-description">
-            A full-stack practice app that connects a React UI to a Java backend and MongoDB database.
-          </p>
-        </a>
-
-        <!-- Project 3 -->
-        <a class="project-card" href="/project3/">
-          <div class="project-image project-image-3" aria-hidden="true"></div>
-          <h3 class="project-title">Project 3: AI Agent for School Applying</h3>
-          <p class="project-description">
-            An AI assistant concept to help students shortlist and compare schools to apply to.
-          </p>
-        </a>
-
-      </div>
-    </section>
-  </main>
-
-  <footer class="site-footer">
-    <div class="container">
-      <p>&copy; 2025 Angela. All rights reserved.</p>
+  <section id="projects">
+    <h2>Projects</h2>
+    <div class="project">
+      <h3>Assignment Tracker</h3>
+      <p>A web app to help students track assignments and deadlines.</p>
+      <p><strong>Tech:</strong> HTML, CSS, JavaScript</p>
     </div>
+    <div class="project">
+      <h3>Personal Portfolio</h3>
+      <p>This website showcasing my projects and interests.</p>
+    </div>
+  </section>
+
+  <section id="music">
+    <h2>Music Playlist</h2>
+    <iframe style="border-radius:12px"
+      src="https://open.spotify.com/embed/playlist/37i9dQZF1DX4sWSpwq3LiO"
+      width="100%" height="152" frameBorder="0" allowfullscreen=""
+      allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture">
+    </iframe>
+  </section>
+
+  <section id="contact">
+    <h2>Contact</h2>
+    <p>Email: yourname@email.com</p>
+    <p>GitHub: <a href="https://github.com/yourusername">github.com/yourusername</a></p>
+    <p>LinkedIn: <a href="https://linkedin.com/in/yourusername">linkedin.com/in/yourusername</a></p>
+  </section>
+
+  <footer>
+    <p>© 2026 Angela</p>
   </footer>
 </body>
 </html>
